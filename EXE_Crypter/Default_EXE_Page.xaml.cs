@@ -1,7 +1,5 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,23 +16,13 @@ using System.Windows.Shapes;
 namespace EXE_Crypter
 {
     /// <summary>
-    /// Interaction logic for Page4.xaml
+    /// Interaction logic for Default_exe_page.xaml
     /// </summary>
-    public partial class Default_EXE_Page : Page
+    public partial class Default_exe_page : Page
     {
-        public Default_EXE_Page()
+        public Default_exe_page()
         {
             InitializeComponent();
-        }
-        private void Build_Payload(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("EXE Saved to Desktop");
-        }
-        private void EXE_Image_Button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.ShowDialog();
-            EXE_Image.Content = fileDialog.FileName;
         }
     }
 }

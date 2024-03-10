@@ -9,13 +9,24 @@
       Title="Connections_Page">
 
     <Grid>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="White">
+            <ListView x:Name="connections_List">
+                <ListView.Items>
+                    <ListViewItem>
+                        <ListViewItem.Content>
+                            <StackPanel>
+                                <TextBlock Text="Connection" FontWeight="Bold" FontSize="16"/>
+                            </StackPanel>
+                        </ListViewItem.Content>
+                    </ListViewItem>
+                </ListView.Items>
+            </ListView>
+        </Grid>
     </Grid>
 </Page>

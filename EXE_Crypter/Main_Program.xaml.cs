@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace EXE_Crypter
 {
     /// <summary>
@@ -26,6 +14,7 @@ namespace EXE_Crypter
             InitializeComponent();
             //this.Tool_Menue.IsDropDownOpen = true;
             //bool Dropdownatstart == True;
+            Main_Menue_Windows_Frame.Navigate(new Payload_window());
         }
         private void Tool_Menue_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -33,11 +22,12 @@ namespace EXE_Crypter
         }
         private void Crypter_page_Button(object sender, RoutedEventArgs e)
         {
-            Main_Menue_Windows_Frame.Navigate(new EXE_Selection_Page());
+            Main_Menue_Windows_Frame.Navigate(new Payload_window());
         }
 
         private void Connections_Page_Button(object sender, RoutedEventArgs e)
         {
+            Buttons_Grid.Background = Brushes.Black;
             Main_Menue_Windows_Frame.Navigate(new Connections_Page());
         }
         private void Minimize_Button_Click(object sender, RoutedEventArgs e)
